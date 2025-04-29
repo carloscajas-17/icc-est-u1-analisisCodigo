@@ -2,6 +2,7 @@ public class App {
     public static void main(String[] args) {
 
         MetodosOrdenamiento ordenador = new MetodosOrdenamiento();
+        Benchmarking benchmarking = new Benchmarking();
         int[] arregloBurbuja = { 34, 2, 10, 6, 7, 5, 1, 15 };
         int[] arregloSeleccion = { 34, 2, 10, 6, 7, 5, 1, 15 };
         int[] arregloInsercion = { 34, 2, 10, 6, 7, 5, 1, 15 };
@@ -17,10 +18,10 @@ public class App {
         /// Anotar en cada metodo el error encontrado y como lo cambio en TEXTO
 
         // Metodo burbujaTradicional
-        int[] arregloBurbujaOrdenado1 = ordenador.burbujaTradicional(arregloBurbuja);
-        System.out.println(
-                "Resultado burbuja tradicional Metodo 1 : " +
-                        java.util.Arrays.toString(arregloBurbujaOrdenado1));
+        //int[] arregloBurbujaOrdenado1 = ordenador.burbujaTradicional(arregloBurbuja);
+        //System.out.println(
+                //"Resultado burbuja tradicional Metodo 1 : " +
+                        //java.util.Arrays.toString(arregloBurbujaOrdenado1));
 
         // // Metodo burbujaTradicionalSegundo
         // int[] arregloBurbujaOrdenado2 =

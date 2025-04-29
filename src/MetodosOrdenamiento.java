@@ -173,14 +173,14 @@ public class MetodosOrdenamiento {
             int actual = arreglo[j];
 
             int i = j - 1;
-            while (j >= 0 && arreglo[j] > actual;) {
+            while (j >= 0 && arreglo[j] > actual) {
                 arreglo[j + 1] = arreglo[j];
             }
             arreglo[i + 1] = actual;
         }
         return arreglo;
     }
-        }  
+          
 
     // Método de inserción con errores
     // Error encontrado:
