@@ -6,11 +6,16 @@ from metodos_Ordenamiento import MetodosOrdenamiento
 class Benchmarking:
     def __init__(self):
         print("Bench inicialziado ")
+
+    def ejemplo(self):
+        self.mO=MetodosOrdenamiento()
+
+        arreglo=self.build_arreglo(10000)
         self.mOrdenamiento=MetodosOrdenamiento()
         arreglo=self.build_arreglo(1000)# mediante el self se acced a todos los metodos y ase que diga ese tu tienes los metodos de cada clase
         tarea=lambda: self.mOrdenamiento.sortByBubble(arreglo)
-        tiempoMillies=self.contar_con_current_time_milles(tarea)
-        tiempoNano=self.contar_con_nano_time(tarea)
+        tiempoMillies=lambda: self.contar_con_current_time_milles(tarea)
+        tiempoNano=lambda: self.contar_con_nano_time(tarea)
 
 
         print(f"Tiempo en milisegundos: {tiempoMillies:.6f}")
@@ -32,8 +37,7 @@ class Benchmarking:
             array.append(n)
 
         return array 
-    
-
+  
 
     #import time
     #ejecutar tarea tarea()
@@ -59,6 +63,16 @@ class Benchmarking:
         tarea()
         fin = time.time_ns()
         return(fin-inicio)/1_000_000_000.0
+    
+
+    def medir_tiempo(sel,tim,array):
+        inicio=time.perf_counter()
+        tim(array)
+        fin=time.perf_counter()
+        return fin-inicio    
+    
+
+
 
   
 
